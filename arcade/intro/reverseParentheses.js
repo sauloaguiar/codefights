@@ -1,3 +1,5 @@
+const assert = require( '../../utils.js').assert;
+
 function reverseParentheses(s) {
   let stacks = [];
   let stackPos = -1;
@@ -28,10 +30,4 @@ function reverseParentheses(s) {
   return result;
 }
 
-function assert(condition, message) {
-  if (!condition) {
-      throw message || "Assertion failed";
-  }
-}
-
-assert(reverseParentheses('a(bc)de') === "acbde");
+console.log(assert(reverseParentheses('a(bc)de') === "acbde"));
